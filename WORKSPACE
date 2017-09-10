@@ -13,6 +13,15 @@
 # limitations under the License.
 workspace(name = "io_bazel_rules_python")
 
+# TODO(mattmoor): Move to a real location and add a sha256.
+http_file(
+    name = "piptool",
+    url = ("https://storage.googleapis.com/" +
+           "artifacts.convoy-adapter.appspot.com/" +
+           "piptool.par"),
+    executable = True,
+)
+
 # Skydoc stuff
 git_repository(
     name = "io_bazel_rules_sass",
