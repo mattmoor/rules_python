@@ -35,7 +35,9 @@ load("@io_bazel_skydoc//skylark:skylark.bzl", "skydoc_repositories")
 skydoc_repositories()
 
 # Requirements for building our piptool.
-load("//python:pip.bzl", "pip_import")
+load("//python:pip.bzl", "pip_import", "pip_repositories")
+
+pip_repositories()
 
 pip_import(
     name = "piptool_deps",
